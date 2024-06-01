@@ -1,0 +1,5 @@
+package com.multi.section01.connection.javaconfig.config;
+
+public class ContextConfiguration {
+
+}

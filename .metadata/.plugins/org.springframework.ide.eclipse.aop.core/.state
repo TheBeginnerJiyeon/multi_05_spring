@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="basic3"/>
+<aop-project name="basic2"/>
+<aop-project name="basic4"/>
+<aop-project name="basic"/>
+</aop-reference-model>

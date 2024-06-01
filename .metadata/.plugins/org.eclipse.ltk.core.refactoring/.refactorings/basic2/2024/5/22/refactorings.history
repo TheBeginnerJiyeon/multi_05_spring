@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;basic2/src/main/java/com/multi/spring/a_resource/Pokemonservice.java&apos; to &apos;PokemonService.java&apos;" description="Rename resource &apos;Pokemonservice.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/com/multi/spring/a_resource/Pokemonservice.java" name="PokemonService.java" stamp="1716956192333" updateReferences="true"/>
+</session>

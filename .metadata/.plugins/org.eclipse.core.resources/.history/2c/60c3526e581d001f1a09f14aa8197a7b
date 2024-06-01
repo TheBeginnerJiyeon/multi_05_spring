@@ -1,0 +1,6 @@
+package com.uni.spring.model.xml.vo;
+
+public interface Food {
+
+	public void eat(String foodName);
+}

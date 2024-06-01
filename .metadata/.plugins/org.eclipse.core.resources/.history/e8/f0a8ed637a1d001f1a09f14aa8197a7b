@@ -1,0 +1,17 @@
+package com.multi.spring.b_message.config;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+
+@Configuration
+@PropertySource("product-info.properties")
+public class ContextConfiguration {
+	
+	// 치환자 문법 (placeholder) 을 활용해서 프로퍼티즈 파일의 키 값으로 벨류를 얻어올 수 있다.
+	@Value("${bread.carpbread.name:붕어빵}")
+	private String carpBreadName;
+	
+	
+
+}

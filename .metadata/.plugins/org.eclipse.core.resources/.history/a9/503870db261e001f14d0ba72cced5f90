@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.multi.section02.mapperscan.model.dao.ProductDAO">
+<!-- 	
+	<resultMap type="productDTO" id="productResultSet">
+
+		 
+	</resultMap> -->
+
+
+	<select id="selectProductList" resultType="productDTO">
+		SELECT
+		A.ID
+		, A.NAME
+		, A.CONTENT
+		, A.PRICE
+		, A.STATUS
+		FROM PRODUCT A
+		WHERE A.STATUS = 'Y'
+		ORDER BY A.ID
+	</select>	
+	
+</mapper>

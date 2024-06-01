@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+
+	<!-- contextConfigLocation : 설정 xml문서 로딩시 설정문서의 경로를 작성 하기위한부분  -->
+
+	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/spring/root-context.xml</param-value>
+	</context-param>
+	
+	
+	<!-- 
+		 ContextLoaderListener 
+		  web.xml 내부에 읽어 들여야 할 설정 xml 문서들 중 가장 먼저 로딩(pre-loading) 되어야 하는 xml 문서를 읽기 위한 리스너  
+	-->
+	<!-- Creates the Spring Container shared by all Servlets and Filters -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+
+
+	<!--DispatcherServlet : 스프링에서 제공,  사용자의 요청을 받아주는 용도의 객체로 아래 경로를 읽어들여 IOC 컨테이너 생성 
+	
+		servlet-context.xml : DispatcherServlet 객체 생성시 읽어들일 문서 로 
+							  각요청에 처리하는 컨트롤러를 지정하는 핸들러 매핑과 요청 처리후 뷰를 지정하는 뷰리졸버 의 정보들을 
+							  저장하고 있는 xml 문서
+	
+	-->
+	<!-- Processes application requests -->
+	<servlet>
+		<servlet-name>appServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>appServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+</web-app>

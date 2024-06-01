@@ -1,0 +1,9 @@
+package com.uni.spring.model.vo;
+
+public interface Singer {
+	public void sing();
+	
+	public void compose();
+	
+	public void dance();
+}

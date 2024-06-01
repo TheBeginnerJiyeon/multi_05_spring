@@ -1,0 +1,5 @@
+package com.multi.spring.a_resource;
+
+public class PokemonService {
+
+}

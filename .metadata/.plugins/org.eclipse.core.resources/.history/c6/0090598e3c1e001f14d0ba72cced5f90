@@ -1,0 +1,35 @@
+package com.multi.spring;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class MethodMappingController {
+	
+	
+	//1. Model 객체 사용하는 방법
+	
+	// Model 이라는 객체를 사용 하여 응답뷰로 전달하고자 하는 데이터를 맵형식(key,value) 로 담을수 있다.
+	// scope 는 request 이다.
+	//@RequestMapping(value = "/menu/regist", method = RequestMethod.POST)
+	// 디폴트는 get
+	@RequestMapping("/menu/regist")
+	public String registMenu(Model model ) {
+		
+		
+		System.out.println("메소드 호출 확인 - registMenu()");
+		
+		model.addAttribute("message","신규 메뉴 등록");
+		
+		return "mappingResult";
+		
+		
+	}
+	
+	
+	
+	
+
+}
