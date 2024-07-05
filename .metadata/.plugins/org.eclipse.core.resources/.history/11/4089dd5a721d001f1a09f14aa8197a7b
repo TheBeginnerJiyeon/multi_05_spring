@@ -1,8 +1,0 @@
-package com.multi.spring.a_resource;
-
-import org.springframework.stereotype.Component;
-
-@Component
-public class PokemonService {
-
-}

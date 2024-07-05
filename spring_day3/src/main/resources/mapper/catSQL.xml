@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cat">
+
+	<!-- private int no;
+	private int lat;
+	private int lon;
+	private String weather;
+	private int windSpeed; 
+	private int temp;
+	private int feelsTemp;
+	private int clouds; -->
+
+
+	<insert id="insert" 
+			parameterType="catDTO" 
+			useGeneratedKeys="true" 
+			keyProperty="no">
+		insert into gwtestcat values 
+		(null,#{관리기관명}, #{데이터기준일자}, #{모색}, #{방사일자}, #{방사장소}, #{성별}, #{전화번호}, #{중성화수술일자}, #{체중}, #{추정나이}, #{포획일자}, #{포획장소})
+	</insert>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+

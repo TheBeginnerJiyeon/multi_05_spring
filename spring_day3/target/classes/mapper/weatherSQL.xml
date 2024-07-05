@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="weather">
+
+	<!-- private int no;
+	private int lat;
+	private int lon;
+	private String weather;
+	private int windSpeed; 
+	private int temp;
+	private int feelsTemp;
+	private int clouds; -->
+
+
+	<insert id="insert" 
+			parameterType="weatherDTO" 
+			useGeneratedKeys="true" 
+			keyProperty="no">
+		insert into weather values 
+		(null,#{lat},#{lon},#{weather},
+		#{windSpeed},#{temp},#{feelsTemp},#{clouds})
+	</insert>
+
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+

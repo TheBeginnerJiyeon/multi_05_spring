@@ -1,5 +1,0 @@
-package com.multi.spring.b_message.config;
-
-public class ContextConfiguration {
-
-}

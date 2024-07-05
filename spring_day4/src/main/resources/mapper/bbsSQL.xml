@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="bbs">
+<!-- ORM, Mapper파일! -->
+<!-- dto(Object) Relational(RDB, row) Mapping  ORM파일, mapper파일-->
+	<insert id="create" parameterType="bbsDTO" >
+		insert into board (title, content, writer) values (null,#{title},#{content},#{writer})
+	</insert>
+	<update id="update" parameterType="bbsDTO" >
+		update board set title = #{title}, content = #{content} where no = #{no}
+	</update>
+	<delete id="delete" parameterType="bbsDTO" >
+		delete from board where no = #{no}
+	</delete>
+	<select id="one" parameterType="bbsDTO" resultType="bbsDTO">
+		select * from board where no = #{no}
+	</select>
+	<select id="list" resultType="bbsDTO">
+		select * from board order by no desc
+	</select>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+

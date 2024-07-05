@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boardMapper">
+
+
+
+	<insert id="insertBoard" parameterType="boardDTO"
+		useGeneratedKeys="true" keyProperty="no">
+
+		insert into board 
+		(no, category_code, title, content,
+		writer)
+		values (#{no}, #{categoryCode} , #{title}, #{content}, #{writer})
+	</insert>
+	
+	<update id="updateBoard" parameterType="boardDTO">
+		update board
+		set 
+		title = #{title},
+		content = #{content}
+		
+		where no = #{no}
+	</update>
+
+
+	<!-- update member set status='N' where user_id=#{userId} -->
+
+
+	<select id="selectBoard" parameterType="int"
+		resultType="boardDTO">
+		select * from board
+		where no = #{no}
+	</select>
+
+
+
+	
+	<select id="selectBoardList" resultType="boardDTO">
+		select * from board
+	</select>
+
+	<delete id="deleteBoard" parameterType="int">
+		delete from board where no = #{no}
+	</delete>
+	
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
